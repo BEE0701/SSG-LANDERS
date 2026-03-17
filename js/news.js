@@ -28,4 +28,17 @@ $(function(){
     $(".cancle").click(function(){
         $("#sub-menu").hide();
     });
+       $("#sub-menu-left li").click(function (e) {
+        e.preventDefault();
+
+        let i = $(this).index();
+        $(this).addClass("active")
+            .siblings()
+            .removeClass("active")
+        $(".sub-submenu").hide();
+        $(".sub-submenu").eq(i).show();
+    });
+    $(".cancle").click(function(){
+        $("#sub-menu").hide();
+    })
 })
